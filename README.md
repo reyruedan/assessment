@@ -111,7 +111,7 @@ Maintainability: Clear separation allows easier debugging and future enhancement
 Flexibility: External interfaces (like REST or persistence) can be replaced without modifying the core logic.
 
 🧪 Testing
-This project includes both unit tests and integration tests to ensure correctness and reliability:
+This project includes both unit tests and integration tests to ensure correctness and reliability (No tests were created for all components):
 
 ✅ Unit Tests
 Use mocking (e.g., with Mockito) to isolate components and test business logic independently.
