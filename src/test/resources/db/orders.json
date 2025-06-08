@@ -1,0 +1,11 @@
+[
+  { "user": "coach", "drink": "long black", "size": "medium" },
+  { "user": "coach", "drink": "long black", "size": "medium" },
+  { "user": "ellis", "drink": "long black", "size": "small" },
+  { "user": "rochelle", "drink": "flat white", "size": "large" },
+  { "user": "diana", "drink": "long black", "size": "medium" },
+  { "user": "ellis", "drink": "long black", "size": "small" },
+  { "user": "rochelle", "drink": "flat white", "size": "large" },
+  { "user": "ellis", "drink": "mocha", "size": "medium" },
+  { "user": "rochelle", "drink": "mochax", "size": "medium" }
+]

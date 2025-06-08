@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "3660fefd-c8f8-44e7-b847-a0dd96608021",
+		"name": "assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1653293"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/users/paid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"user123\",\r\n  \"amountPaid\": 27.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/paid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"paid"
+					]
+				},
+				"description": "assesment\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/paid Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"user123\",\r\n  \"amountPaid\": 27.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/paid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"paid"
+					]
+				},
+				"description": "assesment\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/paid Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"nana\",\r\n  \"amountPaid\": 27.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "assesment\r\n"
+			},
+			"response": []
+		}
+	]
+}
