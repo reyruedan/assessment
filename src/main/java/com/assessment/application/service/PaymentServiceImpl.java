@@ -16,6 +16,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation of the {@link PaymentService} interface.
+ * Handles business logic related to user payments and debts.
+ */
 @Service
 public class PaymentServiceImpl implements PaymentService {
 
@@ -32,6 +36,11 @@ public class PaymentServiceImpl implements PaymentService {
         this.userProduct = userProduct;
     }
 
+    /**
+     * Retrieves the total amount paid by each user.
+     *
+     * @return a list of {@link Payment} objects, each representing a user and their total paid amount
+     */
     @Override
     public List<Payment> getAmountPaidPerUser() {
         log.info("get all payment list by user");
@@ -49,6 +58,11 @@ public class PaymentServiceImpl implements PaymentService {
                 .toList();
     }
 
+    /**
+     * Calculates the amount owed by each user based on their orders and payments.
+     *
+     * @return a list of {@link Payment} objects representing user debts
+     */
     @Override
     public List<Payment> getAmountOwedPerUser() {
         List<Order> orders = userOrder.findAll();
@@ -63,6 +77,11 @@ public class PaymentServiceImpl implements PaymentService {
 
     }
 
+    /**
+     * Saves a new user payment to the system.
+     *
+     * @param payment the payment to be stored
+     */
     @Override
     public void loadUserPayment(Payment payment) {
         userPayment.payment(payment);

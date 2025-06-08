@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * REST controller for handling user payments and owed amounts.
+ * Provides endpoints to retrieve amounts paid, amounts owed,
+ * and to receive new payments.
+ */
 @RestController
 @RequestMapping("/users")
 public class UserPaymentController {
@@ -24,16 +29,32 @@ public class UserPaymentController {
         this.userOwedMapper = userOwedMapper;
     }
 
+    /**
+     * Retrieves the amount paid by each user.
+     *
+     * @return a list of UserPaymentDTO objects representing the amounts paid
+     */
     @GetMapping("/paid")
     public ResponseEntity<List<UserPaymentDTO>> getAmountPaidByUsers() {
         return ResponseEntity.ok(userPaymentMapper.toDTOList(paymentService.getAmountPaidPerUser()));
     }
 
+    /**
+     * Retrieves the amount owed by each user.
+     *
+     * @return a list of UserOwedDTO objects representing the debts
+     */
     @GetMapping("/owed")
     public ResponseEntity<List<UserOwedDTO>> getUserOwedAmounts() {
         return ResponseEntity.ok(userOwedMapper.toDTOList(paymentService.getAmountOwedPerUser()));
     }
 
+    /**
+     * Receives a payment from a user and stores it.
+     *
+     * @param payment the DTO representing the payment made by a user
+     * @return HTTP 200 OK if the payment is processed successfully
+     */
     @PostMapping
     public ResponseEntity<Void> receivePayment(@RequestBody UserPaymentDTO payment) {
         paymentService.loadUserPayment(userPaymentMapper.toPayment(payment));
